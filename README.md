@@ -14,13 +14,15 @@ This project aims to develop a web-based system for managing chronic patients da
 
 - Symptom-based Diagnosis: users can input patient symptoms into the system and receive an initial diagnosis based on the integrated diagnostic service.
 
-### To enhance the functionality of the system, integration with various cloud services is implemented. These services include:
 
-## Cloud Computing Service:
+## To enhance the functionality of the system, integration with various cloud services is implemented. These services include:
+
+### Cloud Computing Service:
 1. Image Recognition API or Computer Vision AI (Imagga): Used to check if the uploaded image contains a face.
+
 2. ChatGPT: Utilizing this service (GPT) for obtaining an initial diagnosis of the patient's condition and acquiring a summary of the medical conditions they are experiencing.
 
-## Cloud Storage Service:
+### Cloud Storage Service:
 Patient data is securely stored using MongoDB Storage service, a NoSQL database known for its scalability and flexibility.
 
 ## Technologies Used
