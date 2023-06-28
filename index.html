@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Management System</title>
+    <!-- Use index css for styling the HTML page -->
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="title">Patient Data Management System</h1>
+    <h3 class="subtitle">Please select the desired action</h3>
+    <form class="option_menu" action="/save" method="post" enctype="multipart/form-data" target="response">
+        <!-- Link to create a new patient -->
+        <a class="s_btn" href="/setPatient.html">Create new patient</a>
+        <!-- Link to find an existing patient -->
+        <a class="s_btn" href="/findID.html">Find existing patient</a>
+        <!-- Link to perform an initial diagnosis -->
+        <a class="s_btn" href="/ChatGPT.html">Perform an initial diagnosis</a>
+    </form>
+</body>
+</html>

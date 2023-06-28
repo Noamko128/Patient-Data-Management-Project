@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Diagnosis</title>    
+    <!-- Use InitialDiagnosis css for styling the HTML page -->
+    <link href="InitialDiagnosis.css" rel="stylesheet" />
+    <script src="../../models/ChatGPT.js" type="module"></script>
+</head>
+<body>
+    <!-- Heading -->
+    <h1 class="title">Ask ChatGPT a question</h1>
+
+    <!-- User Input Section -->
+    <div id="Enter_question">
+        Enter your question:
+    </div>
+    <div class="user_chat">
+        <input id="user_chat_input" name="question">
+        <button id="user_send_btn" onclick="sendUserInput()">send</button>
+    </div>
+
+    <!-- Chat Response Section -->
+    <div id="gpt_respond" class="chat_bubble"></div>
+
+    <!-- JavaScript Code -->
+    <script>
+      // Function to handle user input and send a request to ChatGPT
+      function sendUserInput() {
+        // Retrieve the user's question from the input field
+        var question = document.getElementById("user_chat_input").value.toString();
+        
+        // Send a GET request to the server endpoint '/ask' with the encoded question as a parameter
+        fetch('/ask?question=' + encodeURIComponent(question))
+          .then(response => response.json()) // Parse the response as JSON
+          .then(data => {
+            // Split the response into individual lines
+            var responseLines = data.split('\n');
+            var responseHTML = '';
+            
+            // Generate HTML code for each line of the response
+            for (var i = 0; i < responseLines.length; i++) {
+              responseHTML += '<p>' + responseLines[i] + '</p>'; // Wrap each line in a <p> element
+            }
+            
+            // Display the response HTML in the 'gpt_respond' element
+            document.getElementById("gpt_respond").innerHTML = responseHTML;
+          })
+          .catch(error => console.log(error)); // Log any errors that occur during the process
+      }
+  </script>
+
+    <!-- Go Back Link -->
+    <a class="go_back" href="javascript:history.back()"> Go Back </a>
+</body>
+</html>

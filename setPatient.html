@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Patient</title>
+    <!-- Use setPatient css for styling the HTML page -->
+    <link rel="stylesheet" href="setPatient.css" />
+</head>
+<body>  
+    <!-- Heading -->
+    <h1 class="title">Create a new patient</h1>
+
+    <!-- Patient input form -->
+    <form action="/save" method="post" enctype="multipart/form-data">
+        <table class="main_table" border="0">
+            <!-- ID input field -->
+            <tr>
+                <td class="row_header">ID</td> 
+                <td class="row_input">
+                    <input type="text" name="patientId" autofocus required="true"/>
+                </td>
+            </tr>
+            <!-- First name input field -->
+            <tr>
+                <td class="row_header">First name</td>
+                <td class="row_input">
+                    <input type="text" name="patientFirstName" required="true"/>
+                </td>
+            </tr>
+            <!-- Last name input field -->
+            <tr>
+                <td class="row_header">Last name</td>
+                <td class="row_input">
+                    <input type="text" name="patientLastName" required="true"/>
+                </td>
+            </tr>
+            <!-- Birth date input field -->
+            <tr>
+                <td class="row_header">Birth date</td>
+                <td class="row_input">
+                    <input type="date" name="birthDate" required="true"/>
+                </td>
+            </tr>
+            <!-- Image upload -->
+            <tr>
+                <td class="row_header">Image</td>
+                <td class="row_input" id="picture_btn">
+                  <label for="picture" class="file_upload_label">
+                    <span>Upload</span>
+                  </label>
+                  <input type="file" id="picture" name="picture" accept="image/*" required="true"/>
+                  <span id="upload_status"></span>
+                </td>
+            </tr>              
+            <!-- Medical conditions checkboxes -->
+            <tr>
+                <td class="row_header">Medical Conditions</td>
+                <td class="row_input" dir="ltr">
+                    <ul style="list-style-type: none;margin:0%">
+                        <!-- Checkbox 1: Heart Failure -->
+                        <li>
+                            <div class="checkbox-wrapper-1">
+                                <input id="condition1" name="condition1" value="Heartfailure" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="condition1">Heart Failure</label>
+                            </div>
+                        </li>
+                        <!-- Checkbox 2: Diabetes -->
+                        <li>
+                            <div class="checkbox-wrapper-1">
+                                <input id="condition2" name="condition2" value="Diabetes" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="condition2">Diabetes</label>
+                            </div>
+                        </li>
+                        <!-- Checkbox 3: Kidney Disease -->
+                        <li>
+                            <div class="checkbox-wrapper-1">
+                                <input id="condition3" name="condition3" value="Kidney disease" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="condition3">Kidney disease</label>
+                            </div>
+                        </li>
+                        <!-- Checkbox 4: Cancer -->
+                        <li>
+                            <div class="checkbox-wrapper-1">
+                                <input id="condition4" name="condition4" value="Cancer" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="condition4">Cancer</label>
+                            </div>
+                        </li>
+                        <!-- Checkbox 5: Multiple Sclerosis -->
+                        <li>
+                            <div class="checkbox-wrapper-1">
+                                <input id="condition5" name="condition5" value="Multiple Sclerosis" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="condition5">Multiple Sclerosis</label>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <!-- Create Patient button -->
+                <td colspan="2" style="text-align: right;">
+                  <div class="user_input">
+                    <button id="user_send_btn" onclick="sendUserInput()">Create Patient</button>
+                  </div>
+                </td>
+            </tr>              
+        </table>
+    </form>
+    <!-- JavaScript code for updating upload status -->
+    <script>
+        // Script for updating upload status
+        const pictureInput = document.getElementById('picture');
+        const uploadStatus = document.getElementById('upload_status');
+      
+        // Add event listener for file input change
+        pictureInput.addEventListener('change', function() {
+            // Check if a file has been selected
+            if (pictureInput.files.length > 0) {
+                uploadStatus.textContent = 'Photo uploaded';
+            } else {
+                uploadStatus.textContent = 'No photo uploaded';
+            }
+        });
+    </script>
+    <!-- Go Back link -->
+    <a class="go_back" href="javascript:history.back()"> Go Back </a>
+</body>
+</html>

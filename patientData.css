@@ -1,0 +1,106 @@
+/* patientsdata.css -> patientsdata.ejs */
+
+/* Styling for the body element */
+body {
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  background-color: #f2f2f2;
+  margin: 10px 150px;
+  padding: 20px;
+}
+
+/* Styling for the table element */
+table {
+  width: 70%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: rgba(197, 229, 255, 0.572);
+}
+
+/* Styling for table cells (td) and table header cells (th) */
+td, th {
+  padding: 5px;
+  border: 0px solid black;
+}
+
+/* Styling for the title element */
+.title {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(21, 117, 162);
+  margin: 20px 0;
+}
+
+/* Styling for the notfound element */
+.notfound {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+}
+
+/* Styling for input elements within rows */
+.row_input input[type="text"],
+.row_input input[type="date"],
+.row_input input[type="date"] {
+  width: 50%!important;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Styling for rows */
+.row_input {
+  width: 70%;
+  padding: 5px;
+  list-style-type: none;
+  margin: 0%;
+}
+
+/* Styling for row headers */
+.row_header {
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Styling for checkboxes */
+.checkbox-wrapper-1 {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Styling for unordered lists within rows */
+.row_input ul {
+  display: contents;
+}
+
+/* Styling for checkboxes within unordered lists */
+.row_input ul input {
+  width: 17px;
+  height: 17px;
+}
+
+/* Styling for the go_back element */
+.go_back {
+  box-shadow: 0 8px 16px 0 rgba(171, 222, 245, 0.2), 0 6px 20px 0 rgba(171, 222, 245, 0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  text-decoration: none;
+  background-color: rgb(100, 169, 201);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  position: fixed;
+  left: 40px;
+  top: 40px;
+}

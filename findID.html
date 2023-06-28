@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Patient</title>
+    <!-- Use findbyID css for styling the HTML page -->
+    <link href="findbyID.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Heading -->
+    <h1 class="title">Find a patient by ID number</h1>
+
+    <!-- Form to search for a patient by ID -->
+    <form action="/findbyID" method="get">
+        <!-- Label for ID input -->
+        <div id="Enter_ID"> Enter ID: </div>
+
+        <!-- User input field and search button -->
+        <div class="user_input">
+            <input id="user_chat_input" type="text" name="patientId"/>
+            <button id="user_send_btn">find</button>
+        </div>
+    </form>
+
+    <!-- Go Back link -->
+    <a class="go_back" href="javascript:history.back()"> Go Back </a>
+</body>
+</html>

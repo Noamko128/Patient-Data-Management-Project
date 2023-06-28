@@ -1,0 +1,155 @@
+/* setPatient.css -> setPatient.html */
+
+/* Styling for the body element */
+body {
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  background-color: #f2f2f2;
+  margin: 10px 150px;
+  padding: 20px;
+  direction: ltr; /* Set text direction to left-to-right */
+}
+
+/* Styling for the table element */
+table {
+  width: 70%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: rgba(197, 229, 255, 0.572);
+  direction: ltr; /* Set text direction to left-to-right */
+}
+
+/* Styling for table cells (td) and table header cells (th) */
+td, th {
+  padding: 5px;
+  border: 0px solid black;
+}
+
+/* Styling for the title element */
+.title {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(21, 117, 162);
+  margin: 20px 0;
+}
+
+/* Styling for the go_back element */
+.go_back {
+  box-shadow: 0 8px 16px 0 rgba(171, 222, 245, 0.2), 0 6px 20px 0 rgba(171, 222, 245, 0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  text-decoration: none;
+  background-color: rgb(100, 169, 201);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  position: fixed;
+  left: 40px;
+  top: 40px;
+}
+
+/* Styling for the user_input element */
+.user_input {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Styling for the user_send_btn element */
+#user_send_btn {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(100, 169, 201);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Styling for input elements within rows */
+.row_input input[type="text"],
+.row_input input[type="date"],
+.row_input input[type="date"] {
+  width: 50%!important;
+  text-align: left;
+  padding: 6px;
+  border: none;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Styling for row headers */
+.row_header {
+  text-align: left;
+  padding: 8px;
+}
+
+/* Styling for checkboxes */
+.checkbox-wrapper-1 {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Styling for unordered lists within rows */
+.row_input ul {
+  display: contents;
+}
+
+/* Styling for checkboxes within unordered lists */
+.row_input ul input {
+  width: 17px;
+  height: 17px;
+}
+
+/* Styling for the checkbox label */
+.checkbox-wrapper-1 label {
+  margin-right: 5px;
+}
+
+/* Styling for the picture_btn element */
+#picture_btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the file upload label */
+.file_upload_label {
+  display: inline-block;
+  background-color: rgb(100, 169, 201);
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Styling for the file upload label span */
+.file_upload_label span {
+  display: inline-block;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Styling for the picture input */
+#picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}

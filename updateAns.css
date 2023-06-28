@@ -1,0 +1,96 @@
+/* updateAns.css -> NotaFaceImage.ejs */
+
+/* Styling for the body section */
+body {
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  background-color: #f2f2f2;
+  margin: 10px 150px;
+  padding: 20px;
+}
+
+/* Styling for table cells */
+td, th {
+  padding: 5px;
+  border: 0px solid black;
+}
+
+/* Styling for the title */
+.title {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(21, 117, 162);
+  margin: 20px 0;
+}
+
+/* Styling for the user send button */
+#user_send_btn {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(100, 169, 201);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Styling for div elements */
+div {
+  margin-bottom: 10px;
+}
+
+/* Styling for the patient name */
+#patient_name {
+  font-weight: bold;
+}
+
+/* Styling for the first response section */
+#firstRespond {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Styling for the user chat section */
+.user_chat {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Styling for the user chat input */
+#user_chat_input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* Styling for the chat bubble */
+.chat_bubble {
+  background-color: rgba(100, 169, 201, 0.436);
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  font-size: 15px;
+}
+
+/* Styling for the go back link */
+.go_back {
+  box-shadow: 0 8px 16px 0 rgba(171, 222, 245, 0.2), 0 6px 20px 0 rgba(171, 222, 245, 0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px; 
+  text-decoration: none;
+  background-color: rgb(100, 169, 201);
+  color: rgb(255, 255, 255);
+  border-radius: 8px; 
+  position: fixed;
+  left: 40px; 
+  top: 40px; 
+}
