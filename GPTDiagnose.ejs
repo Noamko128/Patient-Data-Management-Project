@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Diagnose</title>
+    <link href="InitialDiagnosis.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Page Approval -->
+    <h4 class="page_approval">Patient <%= patientKey.firstName %> has been created successfully!</h4>
+    
+    <!-- Title -->
+    <h1 class="title">Initial Diagnosis:</h1>
+    
+    <!-- First Respond -->
+    <div id="first_respond" class="chat_bubble">
+        About your condition: <%= gptAnsKey %>
+    </div>
+    
+    <!-- User Chat Input -->
+    <div class="user_chat">
+        <input id="user_chat_input">
+        <button id="user_send_btn" onclick="sendUserInput()">send</button>
+    </div>
+    
+    <!-- GPT Respond -->
+    <div id="gpt_respond" class="chat_bubble"></div>
+
+    <script>
+        // Function to send user input and receive GPT response
+        function sendUserInput() {
+            var userInput = document.getElementById("user_chat_input").value.toString();
+            var gptHistory = document.getElementById("first_respond").innerHTML.toString();
+            var question = "chat history: " + gptHistory + " new question: " + userInput;
+            fetch('/ask?question=' + encodeURIComponent(question))
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("gpt_respond").innerHTML = data;
+                })
+                .catch(error => console.log(error));
+        }
+    </script>
+    
+    <!-- Go Back Link -->
+    <a class="go_back" href="javascript:history.back()">Go Back</a>
+</body>
+</html>

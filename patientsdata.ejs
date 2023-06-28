@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Info</title>
+    <!-- Use patientData css for styling the HTML page -->
+    <link rel="stylesheet" href="patientData.css" />
+</head>
+<body>
+    <!-- Heading -->
+    <h2 class="title">Patient's details</h2>
+
+    <!-- Conditional rendering based on patients data -->
+    <% if (patients.length > 0) { %>
+        <!-- Display patient details in a table -->
+        <table border="0">
+            <% patients.forEach(function(find_patient) { %>
+                <tr><td>Patient ID: <%= find_patient.ID %></td></tr>
+                <tr><td>Name: <%= find_patient.firstName %></td></tr>
+                <tr><td>Last name: <%= find_patient.lastName %></td></tr>
+                <tr><td>Birth date: <%= find_patient.birthDate %></td></tr>
+                <tr><td>Medical conditions: <%= find_patient.conditions %></td></tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <!-- Display message if no patient is found -->
+        <p class="notfound">No patient found with the provided ID. Please try again</p>
+    <% } %>
+
+    <!-- Go Back link -->
+    <a class="go_back" href="javascript:history.back()"> Go Back </a>
+</body>
+</html>
